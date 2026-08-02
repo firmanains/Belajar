@@ -51,7 +51,7 @@ path + commit SHA. Jangan salin plot ke sini kecuali dipakai di proposal.
 _templates/     template Obsidian
 ```
 
-Jangan tambah folder top-level baru.
+Jangan tambah folder top-level baru. Cara pakai sehari-hari: lihat `GUIDANCE.md`.
 
 ## Plugin
 

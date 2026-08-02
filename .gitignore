@@ -3,3 +3,7 @@
 .trash/
 .DS_Store
 _attachments/*.tmp
+
+# PDF paper tidak masuk git: hak cipta + ukuran repo
+_attachments/papers/*.pdf
+_attachments/**/*.pdf
