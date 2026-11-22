@@ -14,6 +14,7 @@ Sebagian besar catatan ditulis dengan bantuan AI dan belum diperiksa orang lain.
 | `AWS/SAA/` | Catatan persiapan AWS Solutions Architect Associate | [Exam guide](AWS/SAA/_exam-guide.md) |
 | `vault-vector-index-maintenance/` | Catatan riset tentang pemeliharaan vector index | [Now](vault-vector-index-maintenance/00-dashboard/Now.md) |
 | `kakak-dzaky-belajar-python/` | Latihan Python dasar yang saya pakai untuk mengajari keponakan saya, Dzaky | file `.py` di folder itu |
+| `progress/` | Catatan kemajuan belajar per sesi | [Progress Log](progress/00%20Progress%20Log.md) |
 
 ## Peta lintas topik
 

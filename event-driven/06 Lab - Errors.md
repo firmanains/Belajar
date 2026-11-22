@@ -108,7 +108,7 @@ Config retry di semua test: `MaxAttempts: 3`, `InitialInterval: 20ms`, `Multipli
 ### Step 0: A Healthy Message Is Sent
 
 ```bash
-cd ~/Developer/belajar/event-driven/labs/06-errors
+cd ~/Developer/playground/event-driven/labs/06-errors
 go test -run Step0 -v
 ```
 

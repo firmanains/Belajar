@@ -121,7 +121,7 @@ Baca `NewApp` sampai kamu bisa menunjuk baris yang menentukan nama topic dan bar
 ### Step 0: One Event, Three Effects
 
 ```bash
-cd ~/Developer/belajar/event-driven/labs/08-events-with-cqrs
+cd ~/Developer/playground/event-driven/labs/08-events-with-cqrs
 go test -run Step0 -v
 ```
 

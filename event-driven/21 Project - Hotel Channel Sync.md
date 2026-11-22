@@ -72,14 +72,14 @@ Setiap bagian yang harus kamu isi ditandai `// TODO(step N):` di dalam kodenya.
 Nyalakan infrastruktur satu kali, dari root kursus:
 
 ```bash
-cd ~/Developer/belajar/event-driven
+cd ~/Developer/playground/event-driven
 make up
 ```
 
 Test dijalankan per step dari folder `proyek/`:
 
 ```bash
-cd ~/Developer/belajar/event-driven/proyek
+cd ~/Developer/playground/event-driven/proyek
 go test -run TestStep0 -v .
 go test -run TestStep1 -v .
 ```
@@ -126,7 +126,7 @@ curl -s localhost:8080/metrics | grep channelsync
 Lihat isi Kafka dan Postgres langsung. CLI Kafka di dalam container memakai `localhost:19092`:
 
 ```bash
-cd ~/Developer/belajar/event-driven
+cd ~/Developer/playground/event-driven
 docker compose exec kafka /opt/kafka/bin/kafka-console-consumer.sh \
   --bootstrap-server localhost:19092 --topic channelsync.booking-events \
   --from-beginning --property print.key=true --property print.headers=true

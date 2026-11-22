@@ -18,15 +18,25 @@ Teori yang lebih dalam ada di `../backend-engineering-vault`. Kursus ini melengk
 
 Kerjakan berurutan. Kode tiap lab berdiri sendiri, tetapi konsepnya bertumpuk.
 
+## Where To Work
+
+Catatan dibaca di vault ini, tetapi kode dikerjakan di salinan kerja terpisah: `~/Developer/playground/event-driven/`. Folder `labs/` dan `proyek/` di vault adalah sumber yang tidak diubah, supaya kode awal setiap lab selalu tersedia utuh.
+
+Di semua catatan lab, "root kursus" berarti `~/Developer/playground/event-driven`, dan perintah `cd labs/...` dijalankan dari sana. Untuk mengulang satu lab dari awal, salin lagi foldernya dari vault:
+
+```bash
+rsync -a --delete ~/Developer/belajar/event-driven/labs/01-basic-async/ ~/Developer/playground/event-driven/labs/01-basic-async/
+```
+
 ## Setup
 
 Go 1.26 dan Docker (OrbStack) sudah ada di Mac ini. Lab bertanda Postgres atau Kafka butuh infrastruktur lokal:
 
 ```bash
-cd ~/Developer/belajar/event-driven
+cd ~/Developer/playground/event-driven
 make up      # Postgres di port 55432, Kafka di port 59092
 make down    # matikan dan hapus datanya
-make verify  # cek semua lab: kode awal gagal sesuai rancangan, solusi lulus
+make verify  # hanya bermakna di kode yang belum diubah (sumber di vault)
 ```
 
 Tidak ada lab yang menyentuh Kafka atau database kantor.

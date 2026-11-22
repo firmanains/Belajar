@@ -96,7 +96,7 @@ Di lab ini kamu mengubah file test. Itu disengaja: perkakas test adalah bagian d
 ### Step 0: Unit Tests Pass on a Broken Service
 
 ```bash
-cd ~/Developer/belajar/event-driven/labs/07-component-testing
+cd ~/Developer/playground/event-driven/labs/07-component-testing
 go test -run Step0 -v
 ```
 

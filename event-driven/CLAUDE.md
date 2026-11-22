@@ -40,6 +40,8 @@ docker-compose.yaml, Makefile        Postgres 55432 dan Kafka 59092
 verify.sh                            pemeriksa lab
 ```
 
+Pembaca mengerjakan lab di salinan kerja `~/Developer/playground/event-driven/`, bukan di folder ini. `labs/` dan `proyek/` di sini adalah sumber yang tidak diubah; perubahan pada lab dibuat di sini lalu disalin ulang ke salinan kerja.
+
 ## Lab Note Template
 
 Heading persis seperti ini, urutannya tetap:

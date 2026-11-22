@@ -131,7 +131,7 @@ Baca `service.go` dulu. Perhatikan bahwa handler tidak menyebut correlation ID a
 ### Step 0: Handler Works Without Middleware
 
 ```bash
-cd ~/Developer/belajar/event-driven/labs/05-middlewares
+cd ~/Developer/playground/event-driven/labs/05-middlewares
 go test -run Step0 -v
 ```
 
