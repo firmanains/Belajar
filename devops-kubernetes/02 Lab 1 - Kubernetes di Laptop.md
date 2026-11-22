@@ -1,6 +1,6 @@
 # 02 Lab 1: Kubernetes di Laptop (kind)
 
-Kembali ke [[01 Arsitektur Cluster Kantor]] · Lanjut ke [[03 Lab 2 - Cluster seperti Kantor]]
+Kembali ke [[01 Arsitektur Cluster Belajar]] · Lanjut ke [[03 Lab 2 - Cluster seperti Kantor]]
 
 ---
 

@@ -9,7 +9,7 @@ Catatan ini memakai cluster production kantor (10.20.0.x) sebagai contoh nyata. 
 
 | # | Catatan | Isinya | Perkiraan waktu |
 |---|---|---|---|
-| 1 | [[01 Arsitektur Cluster Kantor]] | Konsep dasar (container, pod, CP, WK, MinIO), alur request, alur deploy | 1–2 jam baca |
+| 1 | [[01 Arsitektur Cluster Belajar]] | Konsep dasar (container, pod, CP, WK, MinIO), alur request, alur deploy | 1–2 jam baca |
 | 2 | [[02 Lab 1 - Kubernetes di Laptop]] | Cluster latihan 1 CP + 2 WK di laptop pakai `kind`, deploy aplikasi pertama, scale, rollback | 1 sore |
 | 3 | [[03 Lab 2 - Cluster seperti Kantor]] | Bangun cluster "beneran" di VM pakai `kubeadm`, plus registry, MinIO, MetalLB, ingress | 1–2 hari |
 | 4 | [[04 Lab 3 - CI-CD Deploy dari main]] | GitLab CI: push ke `main` → build image → deploy otomatis ke cluster | 1 hari |

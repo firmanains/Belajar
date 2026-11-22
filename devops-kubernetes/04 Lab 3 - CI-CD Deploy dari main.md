@@ -239,7 +239,7 @@ deploy:
     - kubectl rollout status deployment/hello-api --timeout=120s
 ```
 
-Bandingkan dengan pipeline `layanan-x-api` di [[01 Arsitektur Cluster Kantor]] bagian 10. Strukturnya sama: build dengan tag SHA, push, `set image`, `rollout status`. Tambahannya:
+Bandingkan dengan pipeline `layanan-x-api` di [[01 Arsitektur Cluster Belajar]] bagian 10. Strukturnya sama: build dengan tag SHA, push, `set image`, `rollout status`. Tambahannya:
 - `resource_group`: kalau dua orang merge berdekatan, deploy kedua menunggu yang pertama selesai.
 - `annotate change-cause`: `kubectl rollout history` akan menampilkan commit dan judulnya, bukan cuma nomor revisi.
 - Tidak ada `docker login -p` karena registry lab tanpa password. Kalau registry-mu pakai password, simpan di **Settings → CI/CD → Variables** (centang *Masked*) dan gunakan:

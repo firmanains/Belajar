@@ -1,4 +1,4 @@
-# 01 Arsitektur Cluster Kantor (CP, WK, MinIO)
+# 01 Arsitektur Cluster Belajar (CP, WK, MinIO)
 
 Kembali ke [[00 Mulai di Sini]] · Lanjut ke [[02 Lab 1 - Kubernetes di Laptop]]
 
