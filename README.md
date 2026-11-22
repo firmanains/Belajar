@@ -13,6 +13,7 @@ Sebagian besar catatan ditulis dengan bantuan AI dan belum diperiksa orang lain.
 | `devops-kubernetes/` | Kubernetes dan CI/CD: arsitektur cluster dan tiga lab | [00 Mulai di Sini](devops-kubernetes/00%20Mulai%20di%20Sini.md) |
 | `AWS/SAA/` | Catatan persiapan AWS Solutions Architect Associate | [Exam guide](AWS/SAA/_exam-guide.md) |
 | `vault-vector-index-maintenance/` | Catatan riset tentang pemeliharaan vector index | [Now](vault-vector-index-maintenance/00-dashboard/Now.md) |
+| `kakak-dzaky-belajar-python/` | Latihan Python dasar yang saya pakai untuk mengajari keponakan saya, Dzaky | file `.py` di folder itu |
 
 ## Peta lintas topik
 
