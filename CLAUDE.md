@@ -77,6 +77,74 @@ queryable and the graph tidy.
 9. **When the industry genuinely disagrees, show both sides**, then give an opinionated recommendation with reasoning.
 10. **Never invent** a paper title, URL, benchmark number, or version-specific behaviour. If you are unsure, say the claim is approximate or omit it.
 
+## 4.1 SENTENCE CRAFT (non-negotiable)
+
+Principle 1 says write for a human. This section says how. A sentence the reader
+has to read twice has failed, no matter how correct it is — and this vault exists
+to be re-read six months from now by someone who has lost the context.
+
+**One idea per sentence.** If a sentence carries two claims, it is two sentences.
+Target an average under 25 words; treat 40 as a hard ceiling. Long is not the
+same as complex — a clear 30-word sentence beats three stuttering 10-word ones —
+but past 40 words the reader is holding too much open at once.
+
+**The em-dash is not general-purpose glue.** At most one per sentence, and
+rarely more than one per short paragraph. Before writing one, decide what job it
+is doing and use the right mark instead:
+
+| The job | Use |
+|---|---|
+| Adding a thought that is really its own sentence | A full stop |
+| Slipping in a genuinely secondary aside | Parentheses |
+| Introducing a list or an unpacking | A colon |
+| A sharp contrast that earns the pause | An em-dash — keep it |
+
+Two em-dashes in one sentence means the reader is interrupted, then interrupted
+again before the first interruption resolves. Rewrite it.
+
+**Front-load the subject.** Do not open with a long qualifying clause and make
+the reader wait to learn what the sentence is about. Not *"Karena setiap koneksi
+yang dibuka aplikasi berarti thread baru yang harus dikelola server, dan karena
+jumlah thread yang bisa dijalankan OS terbatas, connection pooling penting."*
+Instead: *"Connection pooling penting karena setiap koneksi yang dibuka aplikasi
+berarti satu thread baru di sisi server, dan jumlah thread yang bisa dijalankan
+OS terbatas."*
+
+**Cut intensifiers that no longer intensify.** `sama sekali`, `sebenarnya`,
+`persis`, `justru`, `benar-benar` are load-bearing once and noise the fifth time.
+The test: delete the word. If the sentence is still true and still says the same
+thing, leave it deleted. Keep it only where it carries a contrast the sentence
+would lose — *"index yang salah urutannya bukan sekadar kurang membantu; ia
+justru membuat query lebih lambat"* earns its `justru`.
+
+**Name the thing instead of pointing at it.** Never write "mekanisme yang
+dijelaskan di note ini" or "pola yang dibahas di note itu". Say *"mekanisme
+netpoller"*, *"pola outbox"*. The wikilink already tells the reader where to go;
+the sentence must tell them what is being discussed.
+
+**Vary the phrasing of analogies, never their structure.** The analogy and the
+statement of where it leaks are both mandatory (§8.3). But do not open every one
+with `Bayangkan …` and close every one with `Analogi ini bocor pada …`. Rotate:
+*"Cara paling mudah memahaminya: …"*, *"Padanan terdekatnya di luar dunia
+software adalah …"*, *"Pikirkan X sebagai …"*; and *"Analogi ini berhenti bekerja
+di titik …"*, *"Yang tidak ditangkap analogi ini: …"*, *"Perbedaan pentingnya:
+…"*. A reader working through five notes in a row should not feel a template
+underneath them.
+
+**Keep shouting out of code comments.** `// SALAH:` and `// BENAR:` as block
+markers are useful and should stay. Beyond those, three to five capitalised
+words per snippet is the limit — write `// Tidak ada data sensitif di klaim`,
+not `// TIDAK ada data sensitif di klaim`. When everything is emphasised,
+nothing is.
+
+**What this section never licenses.** Simplifying the language does not mean
+translating the vocabulary: §3 still governs, and every technical term stays in
+English. It does not mean dropping the qualifier that made a sentence long —
+*"kecuali kalau…"*, *"pada InnoDB, tapi tidak pada PostgreSQL"* — split the
+sentence, keep the condition. And it does not mean converting prose into bullet
+lists: §4.1 still forbids that, and a note that decays into a list of terms is a
+failed note.
+
 ## 5. VAULT STRUCTURE
 
 The structure must be self-explanatory: someone opening the folder tree for the first time should be able to guess what lives where and where to start, without reading documentation.
@@ -496,6 +564,14 @@ Then **stop and wait for the instruction "continue"**.
 - [ ] For a case study: are there three real options rather than two strawmen and an obvious winner?
 - [ ] Zero invented papers, URLs, or benchmark numbers?
 - [ ] Is the `## Catatan Saya` section present and empty?
+- [ ] **Category check (§16.1a):** does each contrasted concept get a category
+      word that is actually true of it, and does the note say what the difference
+      in category *is*? Read the TL;DR last and confirm no later sentence
+      contradicts the categories it sets up.
+- [ ] **Sentence craft (§4.1):** no sentence over 40 words; no sentence with two
+      em-dashes; no dead intensifiers (`sama sekali`, `sebenarnya`, `persis`,
+      `justru`) that survive the delete-test; no "yang dijelaskan di note ini";
+      analogy phrasing not copied from the last note you wrote.
 - [ ] Read cold in six months, does this note still make sense on its own?
 
 ## 16. SELF-REVIEW PASS (mandatory before sending any batch)
@@ -525,6 +601,55 @@ broken mental model. This is the most dangerous failure because it survives
 proofreading. It is caused by oversimplification that never gets corrected,
 by an analogy whose leak was never stated, or by presenting one valid approach
 as the only approach.
+
+#### 16.1a The category error — the commonest way a note goes misguided
+
+A specific, high-frequency instance of *misguided*, worth its own check because
+it hides inside grammatically perfect definitions.
+
+When a note contrasts two concepts, it names a **category word** for each — the
+noun right after "adalah": *unit, mekanisme, cara, pola, pendekatan, teknik,
+struktur, model, lapisan, komponen, strategi, format*. If both concepts get the
+**same** category word, the reader concludes they are the same kind of thing
+differing only in detail. Very often the difference in **category** was the
+entire lesson, and it has just been erased.
+
+The same category word is not automatically wrong. Stack and heap are both
+genuinely "area memori", and saying so is correct. It is wrong when the category
+is **untrue of one of them**.
+
+The canonical failure, and the shape to look for:
+
+> ✗ "Sebuah **process** adalah **unit eksekusi** yang punya ruang memori sendiri.
+> Sebuah **thread** adalah **unit eksekusi** di dalam satu process…"
+
+A process is not a unit of execution. It is a unit of *ownership and isolation* —
+it holds an address space and an fd table, and it does not run. The thread is
+what the kernel schedules. That is precisely why a process must contain at least
+one thread, and precisely why isolation is a property of processes rather than
+threads. Write the categories truthfully, then state the difference itself:
+
+> ✓ "Sebuah **process** adalah **wadah**: ia memiliki ruang memori dan file
+> descriptor table, dan ia tidak mengeksekusi apa pun sendiri. **Thread** adalah
+> **unit eksekusi**: ia yang dijadwalkan CPU. Karena itulah setiap process wajib
+> berisi minimal satu thread."
+
+Three rules follow:
+
+1. **Give each contrasted concept its own truthful category word,** then add one
+   sentence naming the difference in category. That sentence is usually the note.
+2. **Hunt for the word that betrays you.** `benar-benar`, `sebenarnya`, `secara
+   murni` in a definition often mark the spot where the writer half-noticed the
+   category was wrong and moved on. "Thread — unit yang *benar-benar* dijadwalkan
+   CPU" is the note quietly contradicting its own TL;DR.
+3. **When a third sibling term appears, place it in a category explicitly.**
+   Never resolve it with "bukan salah satu dari keduanya secara murni" — that
+   leaves the reader with no box at all. A goroutine is a unit of execution, the
+   same category as a thread; what differs is *who schedules it*.
+
+Check this against the TL;DR **last**, after the note is finished. TL;DR is
+usually written first and rarely revised, so it is where stale categories
+survive.
 
 ### 16.2 Claim types that are most often wrong — check these specifically
 

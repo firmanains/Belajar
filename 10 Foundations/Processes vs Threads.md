@@ -3,12 +3,17 @@ title: Processes vs Threads
 type: concept
 level: junior
 domain: foundations
-status: unread
+status: mastered
 difficulty: 2
 est_minutes: 14
 prerequisites: []
-next: ["[[Memory Layout - Stack vs Heap]]", "[[Blocking vs Non-Blocking IO]]"]
-tags: [backend, foundations, go]
+next:
+  - "[[Memory Layout - Stack vs Heap]]"
+  - "[[Blocking vs Non-Blocking IO]]"
+tags:
+  - backend
+  - foundations
+  - go
 created: 2026-07-26
 ---
 

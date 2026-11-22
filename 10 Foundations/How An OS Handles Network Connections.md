@@ -47,7 +47,7 @@ flowchart LR
     Match -->|"ya, handshake selesai"| Queue[("Accept Queue\n(kapasitas terbatas)")]
     Match -->|"tidak ada yang listen"| Reset["Kernel kirim RST"]
     Queue --> Accept["Aplikasi memanggil accept()"]
-    Accept --> FD["File descriptor baru\nuntuk koneksi ini"]
+    Accept --> FD["File descriptor baru\n untuk koneksi ini"]
     Queue -.->|"antrean penuh"| Drop["SYN dibuang diam-diam\n(client mengalami timeout)"]
 ```
 
