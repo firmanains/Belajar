@@ -52,4 +52,3 @@ Jawaban tiap lab ada di folder `_solusi/`. Coba dulu sebelum membukanya.
 ## Konvensi
 
 - Tiap folder punya aturan penulisan sendiri di `CLAUDE.md`-nya; ikuti aturan folder tempat catatan itu berada.
-- Repo ini publik. Jangan menulis nama perusahaan, alamat IP internal, nama akun, atau detail sistem tempat kerja. Pakai sebutan umum dan alamat contoh.
