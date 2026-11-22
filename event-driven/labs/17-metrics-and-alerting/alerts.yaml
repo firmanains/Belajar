@@ -1,0 +1,15 @@
+# File ini yang kamu ubah di Step 5.
+#
+# Alert di bawah ini contoh yang buruk: ia menembak berdasarkan penyebab
+# (CPU tinggi), bukan gejala yang dirasakan tamu hotel. CPU 95% saat semua
+# email terkirim tepat waktu bukan masalah; CPU 5% saat consumer macet adalah
+# masalah. Ganti dengan tiga alert yang diminta di catatan lab.
+groups:
+  - name: pms-messaging
+    rules:
+      - alert: HighCPU
+        expr: process_cpu_seconds_total > 0.9
+        labels:
+          severity: page
+        annotations:
+          summary: CPU tinggi

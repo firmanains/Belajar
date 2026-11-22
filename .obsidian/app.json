@@ -1,0 +1,8 @@
+{
+  "userIgnoreFilters": [
+    "curriculum/",
+    "kakak-belajar-python/",
+    "event-driven/labs/",
+    "event-driven/proyek/"
+  ]
+}

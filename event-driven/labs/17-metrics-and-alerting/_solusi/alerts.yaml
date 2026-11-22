@@ -1,0 +1,39 @@
+groups:
+  - name: pms-messaging
+    rules:
+      # Gejala utama: ada message yang menunggu terlalu lama. Alert ini tetap
+      # menyala kalau consumer mati total, karena gauge dihitung saat scrape.
+      - alert: OldestMessageTooOld
+        expr: max by (queue) (pms_queue_oldest_message_age_seconds) > 300
+        for: 5m
+        labels:
+          severity: page
+        annotations:
+          summary: "Message tertua di {{ $labels.queue }} sudah menunggu lebih dari 5 menit"
+          runbook: "Cek apakah consumer hidup, lalu lihat pms_messages_processed_total per outcome."
+
+      # Rasio, bukan jumlah: 10 kegagalan dari 10 message itu darurat,
+      # 10 kegagalan dari 100.000 message bukan.
+      - alert: HighFailureRatio
+        expr: |
+          sum by (handler) (rate(pms_messages_processed_total{outcome="failure"}[5m]))
+            /
+          sum by (handler) (rate(pms_messages_processed_total[5m]))
+            > 0.05
+        for: 10m
+        labels:
+          severity: page
+        annotations:
+          summary: "Lebih dari 5% message di handler {{ $labels.handler }} gagal"
+          runbook: "Baca log error handler tersebut; bedakan dependency yang mati dari bug kode."
+
+      # Dead letter queue bertambah berarti ada message yang butuh keputusan
+      # manusia. Tidak perlu membangunkan orang: cukup tiket.
+      - alert: DeadLetterGrowing
+        expr: increase(pms_dead_letter_messages_total[15m]) > 0
+        for: 1m
+        labels:
+          severity: ticket
+        annotations:
+          summary: "Ada message baru di dead letter queue"
+          runbook: "Periksa alasan gagal di dead letter queue, perbaiki penyebabnya, lalu requeue."
