@@ -1,0 +1,7 @@
+.DS_Store
+# PDF kurikulum sertifikasi (274 MB) punya repo sendiri
+curriculum/
+# berubah tiap membuka catatan; bentrok antar-perangkat
+.obsidian/workspace*.json
+.claude/
+.saa-logs/
