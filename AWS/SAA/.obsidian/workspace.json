@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "cdfc6140e165beb5",
+    "type": "split",
+    "children": [
+      {
+        "id": "f399222daf166fbb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bfd8ce6d545cce25",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "iam/iam-fundamentals.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "iam-fundamentals"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "143146bce40caefc",
+    "type": "split",
+    "children": [
+      {
+        "id": "c45a17ce727872f2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "df45aac939147dda",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a91e28d6d026dda9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a42068a92520bf77",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d664d170fb6b59b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "69973a999f158333",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aeb8c4ec14c575f8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "iam/iam-fundamentals.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "421e290bc3bf7f8d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "iam/iam-fundamentals.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "32090a6b403f1d03",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0a2462e4067356f3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "165c38e8556c39cc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "iam/iam-fundamentals.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "df45aac939147dda",
+  "lastOpenFiles": [
+    "storage/block-and-file-storage.md",
+    "storage",
+    "s3/s3-security-and-performance.md",
+    "s3/s3-fundamentals.md",
+    "s3",
+    "monitoring/_index-monitoring-and-audit.md",
+    "monitoring/aws-config.md",
+    "monitoring/cloudtrail.md",
+    "monitoring/cloudwatch.md",
+    "monitoring",
+    "resilience/disaster-recovery-and-aws-backup.md",
+    "resilience",
+    "_todo.md",
+    "_exam-guide.md",
+    "iam/iam-fundamentals.md",
+    "route53/route-53.md",
+    "route53",
+    "decoupling/_index-decoupling.md",
+    "decoupling/eventbridge.md",
+    "decoupling/sns-and-fan-out.md",
+    "decoupling/sqs.md",
+    "decoupling",
+    "ec2/ec2-auto-scaling.md",
+    "elb/elastic-load-balancing.md",
+    "elb",
+    "ec2/ec2-fundamentals.md",
+    "ec2",
+    "threat-protection/_index-threat-protection.md",
+    "threat-protection/cognito.md",
+    "threat-protection/guardduty-inspector-macie.md",
+    "threat-protection/waf-and-shield.md",
+    "threat-protection",
+    "encryption/_index-encryption-and-secrets.md",
+    "encryption/secrets-manager-vs-parameter-store.md",
+    "encryption/acm-certificates.md",
+    "encryption"
+  ]
+}
