@@ -51,3 +51,12 @@ Kerjakan berurutan. Lab 2 dan Lab 3 memakai hasil lab sebelumnya.
 - `kubectl explain deployment.spec` → dokumentasi langsung dari terminal
 - Dokumentasi GitLab CI: https://docs.gitlab.com/ci/
 - Kalau mau sertifikasi: CKAD (fokus developer) lalu CKA (fokus admin cluster). Lab 2 di sini sudah mirip materi CKA.
+
+## Baca juga di backend-engineering-vault
+
+- [[Kubernetes Core Concepts - Pods, Deployments, Services, Ingress]]
+- [[Kubernetes Config, Secrets, Probes, and Autoscaling]]
+- [[Desired-State Reconciliation]]
+- [[Docker - Images, Layers, and Multi-Stage Builds for Go]]
+- [[CI-CD Pipelines]]
+- [[Blue-Green and Canary Releases]]
