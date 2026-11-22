@@ -11,7 +11,7 @@ Sebagian besar catatan ditulis dengan bantuan AI dan belum diperiksa orang lain.
 | `backend-engineering-vault/` | Konsep backend engineering dari junior sampai senior, dengan Go | [Read Me First](backend-engineering-vault/00%20Start%20Here/Read%20Me%20First.md) |
 | `event-driven/` | 20 lab dan satu proyek akhir event-driven dengan Go, Kafka, dan PostgreSQL | [00 Start Here](event-driven/00%20Start%20Here.md) |
 | `devops-kubernetes/` | Kubernetes dan CI/CD: arsitektur cluster dan tiga lab | [00 Mulai di Sini](devops-kubernetes/00%20Mulai%20di%20Sini.md) |
-| `AWS/SAA/` | Catatan persiapan AWS Solutions Architect Associate | [Exam guide](AWS/SAA/_exam-guide.md) |
+| `AWS/SAA/` | Catatan belajar AWS Solutions Architect Associate | [Exam guide](AWS/SAA/_exam-guide.md) |
 | `vault-vector-index-maintenance/` | Catatan riset tentang pemeliharaan vector index | [Now](vault-vector-index-maintenance/00-dashboard/Now.md) |
 | `kakak-dzaky-belajar-python/` | Latihan Python dasar yang saya pakai untuk mengajari keponakan saya, Dzaky | file `.py` di folder itu |
 | `progress/` | Catatan kemajuan belajar per sesi | [Progress Log](progress/00%20Progress%20Log.md) |
