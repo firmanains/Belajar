@@ -54,7 +54,7 @@ The **zone apex** is the top node of a DNS namespace, for example `example.com` 
 ```mermaid
 flowchart TD
   subgraph pub["Public hosted zone: example.com"]
-    r1["A record: www.example.com"]
+    r1["A record: www#46;example.com"]
     r2["Alias record: example.com (zone apex)"]
   end
   subgraph priv["Private hosted zone: internal.example.com"]
@@ -74,11 +74,11 @@ Simplified: the diagram does not show how a private hosted zone is associated wi
 ## How it works
 ```mermaid
 flowchart LR
-  c["Client"] -->|"1. DNS query for www.example.com"| r53["Route 53"]
-  r53 -->|"2. find records with matching name and type"| hz["Hosted zone example.com"]
-  hz -->|"3. apply routing policy"| pol["Routing policy"]
-  pol -->|"4. drop unhealthy records"| hc["Health check result"]
-  pol -->|"5. answer: IP address"| c
+  c["Client"] -->|"(1) DNS query for www#46;example.com"| r53["Route 53"]
+  r53 -->|"(2) find records with matching name and type"| hz["Hosted zone example.com"]
+  hz -->|"(3) apply routing policy"| pol["Routing policy"]
+  pol -->|"(4) drop unhealthy records"| hc["Health check result"]
+  pol -->|"(5) answer: IP address"| c
 ```
 > [!info] How to read this
 > The routing policy picks the answer. Health check results remove unhealthy records from the answer.

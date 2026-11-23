@@ -64,11 +64,11 @@ Simplified: VPC and subnets are left out, and the diagram does not show where th
 ## How it works
 ```mermaid
 flowchart LR
-  cw["CloudWatch metric<br>average CPU 70%"] -->|"1. above target 50%"| al["CloudWatch alarm"]
-  al -->|"2. alarm invokes scaling"| asg["Auto Scaling group"]
-  asg -->|"3. raise desired capacity<br>(within min and max)"| asg
-  asg -->|"4. launch instance"| ni["New instance<br>(from launch template)"]
-  ni -->|"5. registered with"| elb["Elastic Load Balancing"]
+  cw["CloudWatch metric<br>average CPU 70%"] -->|"(1) above target 50%"| al["CloudWatch alarm"]
+  al -->|"(2) alarm invokes scaling"| asg["Auto Scaling group"]
+  asg -->|"(3) raise desired capacity<br>(within min and max)"| asg
+  asg -->|"(4) launch instance"| ni["New instance<br>(from launch template)"]
+  ni -->|"(5) registered with"| elb["Elastic Load Balancing"]
 ```
 > [!info] How to read this
 > This is the target tracking path. The numbers match the list below.

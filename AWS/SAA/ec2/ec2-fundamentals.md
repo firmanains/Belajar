@@ -65,9 +65,9 @@ Simplified: partition groups are not drawn. They can also have partitions in sev
 ## How it works
 ```mermaid
 flowchart LR
-  a["AMI in Region A"] -->|1. copy AMI| b["AMI copy in Region B"]
-  b -->|2. choose instance type| t["Instance type, e.g. m5.large"]
-  t -->|3. launch, optionally into a placement group| i["Instances in Region B"]
+  a["AMI in Region A"] -->|"(1) copy AMI"| b["AMI copy in Region B"]
+  b -->|"(2) choose instance type"| t["Instance type, e.g. m5.large"]
+  t -->|"(3) launch, optionally into a placement group"| i["Instances in Region B"]
 ```
 
 > [!info] How to read this

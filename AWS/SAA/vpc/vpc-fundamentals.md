@@ -68,9 +68,9 @@ flowchart LR
   nat["NAT gateway<br>(public subnet 10.0.1.0/24)"]
   igw["Internet gateway"]
   net["Internet"]
-  db -->|"1. route table sends traffic to NAT gateway"| nat
-  nat -->|"2. NAT gateway translates source to its private IP"| igw
-  igw -->|"3. IGW maps to the Elastic IP"| net
+  db -->|"(1) route table sends traffic to NAT gateway"| nat
+  nat -->|"(2) NAT gateway translates source to its private IP"| igw
+  igw -->|"(3) IGW maps to the Elastic IP"| net
 ```
 > [!info] How to read this
 > The traffic always starts inside the VPC. The private subnet itself has no route to the IGW; only the NAT gateway's path does.[^4]

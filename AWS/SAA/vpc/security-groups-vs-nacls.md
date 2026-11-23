@@ -58,12 +58,12 @@ Example: a client at `203.0.113.10` opens HTTPS to a web server.
 ```mermaid
 flowchart LR
   subgraph sgflow["Security group check"]
-    c1["Client 203.0.113.10"] -->|1. request TCP 443| sgr["SG inbound rule: allow TCP 443"]
-    sgr -->|"2. response allowed automatically"| c1
+    c1["Client 203.0.113.10"] -->|"(1) request TCP 443"| sgr["SG inbound rule: allow TCP 443"]
+    sgr -->|"(2) response allowed automatically"| c1
   end
   subgraph naclflow["Network ACL check"]
-    c2["Client 203.0.113.10"] -->|"3. request: inbound rule 100 allow TCP 443"| n1["NACL"]
-    n1 -->|"4. response: outbound rule 100 allow TCP 1024-65535"| c2
+    c2["Client 203.0.113.10"] -->|"(3) request: inbound rule 100 allow TCP 443"| n1["NACL"]
+    n1 -->|"(4) response: outbound rule 100 allow TCP 1024-65535"| c2
   end
 ```
 

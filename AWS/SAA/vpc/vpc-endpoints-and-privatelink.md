@@ -44,11 +44,11 @@ flowchart LR
     s3["Amazon S3"]
     svc["Endpoint service (another VPC or account)"]
   end
-  app -->|1. S3 request| rt
-  rt -->|2. prefix list route| gwe
-  gwe -->|3. stays in AWS network| s3
-  app -->|4. private request| eni
-  eni -->|5. PrivateLink| svc
+  app -->|"(1) S3 request"| rt
+  rt -->|"(2) prefix list route"| gwe
+  gwe -->|"(3) stays in AWS network"| s3
+  app -->|"(4) private request"| eni
+  eni -->|"(5) PrivateLink"| svc
 ```
 
 > [!info] How to read this

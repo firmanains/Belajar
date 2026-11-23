@@ -58,12 +58,12 @@ Simplified: IAM permissions, encryption and cross-Region views are left out. Met
 ## How it works
 ```mermaid
 flowchart LR
-  ec2["EC2 instance"] -->|1. service publishes metric| m["Metric"]
-  app["Application log lines"] -->|2. log events| lg["Log group"]
-  lg -->|3. metric filter| m
-  m -->|4. alarm evaluates| al["Alarm"]
-  al -->|5. ALARM state| sns["SNS topic"]
-  al -->|5. ALARM state| asg["Auto Scaling policy"]
+  ec2["EC2 instance"] -->|"(1) service publishes metric"| m["Metric"]
+  app["Application log lines"] -->|"(2) log events"| lg["Log group"]
+  lg -->|"(3) metric filter"| m
+  m -->|"(4) alarm evaluates"| al["Alarm"]
+  al -->|"(5) ALARM state"| sns["SNS topic"]
+  al -->|"(5) ALARM state"| asg["Auto Scaling policy"]
 ```
 1. An AWS service such as EC2 publishes metrics to CloudWatch by default, or your application publishes a custom metric.[^1]
 2. Log events are sent to a log group.[^5]

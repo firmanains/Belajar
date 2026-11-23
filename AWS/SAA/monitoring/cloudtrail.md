@@ -51,11 +51,11 @@ Simplified: multi-Region and organization trails, CloudTrail Lake and delivery t
 ## How it works
 ```mermaid
 flowchart LR
-  u["Engineer: console, CLI or SDK"] -->|1. API call| svc["AWS service"]
-  svc -->|2. event recorded| ct["CloudTrail"]
-  ct -->|3. always available| eh["Event history 90 days"]
-  ct -->|4. if a trail exists| s3["S3 bucket"]
-  s3 -->|5. every hour| dg["Digest file"]
+  u["Engineer: console, CLI or SDK"] -->|"(1) API call"| svc["AWS service"]
+  svc -->|"(2) event recorded"| ct["CloudTrail"]
+  ct -->|"(3) always available"| eh["Event history 90 days"]
+  ct -->|"(4) if a trail exists"| s3["S3 bucket"]
+  s3 -->|"(5) every hour"| dg["Digest file"]
 ```
 1. A person or service makes a call through the console, an SDK, or the command line.[^1]
 2. CloudTrail records it as an event.[^1]

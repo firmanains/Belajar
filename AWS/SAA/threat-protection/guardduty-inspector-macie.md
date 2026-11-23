@@ -81,11 +81,11 @@ flowchart LR
   con["GuardDuty console"]
   eb["EventBridge"]
   act["Your automation, for example a Lambda function"]
-  src -->|1. ingested automatically| gd
-  gd -->|2. creates| fnd
-  fnd -->|3. delivered| con
-  fnd -->|3. delivered| eb
-  eb -.->|4. you can respond| act
+  src -->|"(1) ingested automatically"| gd
+  gd -->|"(2) creates"| fnd
+  fnd -->|"(3) delivered"| con
+  fnd -->|"(3) delivered"| eb
+  eb -.->|"(4) you can respond"| act
 ```
 
 > [!info] How to read this

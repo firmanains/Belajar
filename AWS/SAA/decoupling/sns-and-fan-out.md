@@ -64,11 +64,11 @@ flowchart LR
   qs["shipping queue (filter: region = EU)"]
   wb["Billing workers"]
   ws["Shipping workers"]
-  pub -->|1. publish| topic
-  topic -->|2. fanned out| qb
-  topic -->|2. fanned out, if filter matches| qs
-  wb -->|3. poll| qb
-  ws -->|3. poll| qs
+  pub -->|"(1) publish"| topic
+  topic -->|"(2) fanned out"| qb
+  topic -->|"(2) fanned out, if filter matches"| qs
+  wb -->|"(3) poll"| qb
+  ws -->|"(3) poll"| qs
 ```
 1. The publisher sends the message to the topic.
 2. SNS fans the message out to each subscribed SQS queue. A subscription with a filter policy gets the message only if it matches.[^1][^2]

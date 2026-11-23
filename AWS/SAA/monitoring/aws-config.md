@@ -60,11 +60,11 @@ Simplified: whether Config is set up per Region was not verified. One shared buc
 ## How it works
 ```mermaid
 flowchart LR
-  res["Resource: security group"] -->|1. configuration changes| rec["Recorder"]
-  rec -->|2. configuration item| hist["Configuration history"]
-  hist -->|3. history file every 6 hours| s3["S3 bucket"]
-  rec -->|4. change triggers rule| rule["Config rule"]
-  rule -->|5. NON_COMPLIANT| note["Notification"]
+  res["Resource: security group"] -->|"(1) configuration changes"| rec["Recorder"]
+  rec -->|"(2) configuration item"| hist["Configuration history"]
+  hist -->|"(3) history file every 6 hours"| s3["S3 bucket"]
+  rec -->|"(4) change triggers rule"| rule["Config rule"]
+  rule -->|"(5) NON_COMPLIANT"| note["Notification"]
 ```
 1. Config discovers supported resources and tracks changes by calling Describe or List APIs. It also finds changes not made through the API by examining configurations periodically.[^2]
 2. The recorder stores each change as a configuration item.[^4]

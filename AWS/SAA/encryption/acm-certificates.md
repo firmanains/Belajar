@@ -37,7 +37,7 @@ flowchart TD
     cf["CloudFront distribution"]
   end
   subgraph use1["Region us-east-1"]
-    c1["ACM certificate for www.example.com"]
+    c1["ACM certificate for www#46;example.com"]
   end
   subgraph euw1["Region eu-west-1"]
     c2["ACM certificate for api.example.com"]
@@ -57,10 +57,10 @@ Request, validate, attach, renew:
 
 ```mermaid
 flowchart LR
-  a["Request certificate<br>(DNS validation)"] -->|1. add record| b["DNS validation record<br>in your domain"]
-  b -->|2. ACM validates and issues| c["ACM certificate"]
-  c -->|3. associate| d["Load balancer or<br>CloudFront"]
-  c -->|4. renew automatically| c
+  a["Request certificate<br>(DNS validation)"] -->|"(1) add record"| b["DNS validation record<br>in your domain"]
+  b -->|"(2) ACM validates and issues"| c["ACM certificate"]
+  c -->|"(3) associate"| d["Load balancer or<br>CloudFront"]
+  c -->|"(4) renew automatically"| c
 ```
 
 1. You request a public certificate and choose DNS validation. You add the DNS validation record to your domain.

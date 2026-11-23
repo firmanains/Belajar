@@ -64,13 +64,13 @@ Simplified: cross-zone arrows (node A to instance 2) are not drawn; see the work
 ## How it works
 ```mermaid
 flowchart LR
-  c["Client"] -->|"1. DNS lookup returns node IPs"| dns["DNS"]
-  c -->|"2. request to a node"| alb["ALB node"]
-  alb -->|"3. evaluate rules by priority"| rule["Listener rules"]
-  rule -->|"4a. path /api/*"| tgApi["Target group: api"]
-  rule -->|"4b. default rule"| tgWeb["Target group: web"]
-  tgApi -->|"5. healthy target only"| api1["api instance"]
-  tgWeb -->|"5. healthy target only"| web1["web instance"]
+  c["Client"] -->|"(1) DNS lookup returns node IPs"| dns["DNS"]
+  c -->|"(2) request to a node"| alb["ALB node"]
+  alb -->|"(3) evaluate rules by priority"| rule["Listener rules"]
+  rule -->|"(4a) path /api/*"| tgApi["Target group: api"]
+  rule -->|"(4b) default rule"| tgWeb["Target group: web"]
+  tgApi -->|"(5) healthy target only"| api1["api instance"]
+  tgWeb -->|"(5) healthy target only"| web1["web instance"]
 ```
 1. The client resolves the load balancer DNS name. DNS returns the IP addresses of the load balancer nodes.[^6]
 2. The client chooses one IP address and sends the request to that node.[^6]

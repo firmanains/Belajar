@@ -76,10 +76,10 @@ Intelligent-Tiering moves objects that have not been accessed for 30 consecutive
 
 ```mermaid
 flowchart LR
-  up["Upload: Standard"] -->|"1. rule: transition after N days"| ia["Standard-IA"]
-  ia -->|"2. rule: transition"| gfr["Glacier Flexible Retrieval"]
-  gfr -->|"3. rule: transition (one way)"| da["Glacier Deep Archive"]
-  da -->|"4. rule: expiration"| gone["Object deleted by S3"]
+  up["Upload: Standard"] -->|"(1) rule: transition after N days"| ia["Standard-IA"]
+  ia -->|"(2) rule: transition"| gfr["Glacier Flexible Retrieval"]
+  gfr -->|"(3) rule: transition (one way)"| da["Glacier Deep Archive"]
+  da -->|"(4) rule: expiration"| gone["Object deleted by S3"]
 ```
 
 > [!info] How to read this
@@ -129,8 +129,8 @@ Versioning states: unversioned (the default), versioning-enabled, and versioning
 
 ```mermaid
 flowchart LR
-  src["Source bucket (versioning on)"] -->|"1. new object"| s3["S3 replication, asynchronous"]
-  s3 -->|"2. copy"| dst["Destination bucket (versioning on)"]
+  src["Source bucket (versioning on)"] -->|"(1) new object"| s3["S3 replication, asynchronous"]
+  s3 -->|"(2) copy"| dst["Destination bucket (versioning on)"]
 ```
 
 > [!info] How to read this

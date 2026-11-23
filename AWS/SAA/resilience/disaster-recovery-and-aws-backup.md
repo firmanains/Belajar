@@ -72,10 +72,10 @@ flowchart LR
   va["Vault A (Region A)"]
   vb["Vault B (Region B)"]
   new["Restored resources (Region B)"]
-  plan -->|1. selects by tag| res
-  res -->|2. backup job| va
-  va -->|3. copy job| vb
-  vb -->|4. restore at failover| new
+  plan -->|"(1) selects by tag"| res
+  res -->|"(2) backup job"| va
+  va -->|"(3) copy job"| vb
+  vb -->|"(4) restore at failover"| new
 ```
 
 1. The backup plan applies to resources, for example by tag.[^3]
