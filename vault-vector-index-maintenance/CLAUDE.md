@@ -68,7 +68,29 @@ kabur — pecah atau buang.
 
 ## Gaya catatan concept
 
-- Maksimal **80 baris**. Kalau lebih, pecah jadi dua konsep.
+- Target **jelas dan low-level**, bukan pendek. Maksimal sekitar **230 baris**.
+  Kalau lebih, tulis usulan pemecahan di "Usulan tambahan".
+- Contoh format dan tingkat ketelitian: `07-concepts/T1-03-cosine-ekuivalen-l2-setelah-normalisasi.md`.
+- Wajib ada:
+  - **Istilah**: tabel `Istilah | Arti | Contoh` untuk setiap istilah yang dipakai
+    di catatan, sebelum istilah itu dipakai di penjelasan.
+  - **Gambaran**: minimal satu diagram Mermaid (`flowchart`, `sequenceDiagram`,
+    atau `xychart-beta` untuk grafik) plus callout `> [!info] Cara membaca`.
+    Angka di grafik harus hasil kode, bukan karangan.
+  - **Penjelasan bertahap**: 4–7 langkah bernomor yang membangun pemahaman dari
+    intuisi → mekanisme → low-level. Ini bagian utama; formula saja tidak cukup.
+  - **Trace langkah demi langkah** (untuk algoritma atau struktur data): jalankan
+    contoh kecil lewat algoritmanya, tunjukkan state setelah tiap langkah (isi heap,
+    node yang dikunjungi, bucket, tabel lookup) sebagai tabel hasil kode. Tujuannya
+    pemilik melihat apa yang terjadi "di balik layar", bukan hanya hasil akhirnya.
+  - **Contoh angka kecil**: vektor/data mini (d = 2 atau 3, n ≤ 10) yang dihitung
+    dengan kode, ditulis sebagai tabel.
+  - **Sudut pandang low-level** bila relevan: loop, jumlah operasi, byte memori,
+    struktur data. Pseudocode Go boleh; kode verifikasi tetap Python.
+- Diagram harus tampil di Obsidian. Obsidian (≥1.15) merender Mermaid dengan Pele,
+  bukan mermaid.js. Cek dengan merender lewat `lib/pele.min.js` milik Obsidian.
+  Label langkah ditulis `"(1) ..."` dalam tanda kutip, supaya juga tampil di
+  mermaid.js (GitHub). Hindari `www.` dan URL di label.
 - Bahasa Indonesia, kalimat pendek, tanpa basa-basi pembuka.
 - Frontmatter sesuai `_templates/concept.md`.
 - Setiap catatan menjawab satu pertanyaan, judulnya adalah pertanyaan itu
