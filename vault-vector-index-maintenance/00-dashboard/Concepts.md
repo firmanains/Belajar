@@ -80,3 +80,11 @@ SORT id ASC
 ```
 
 ## Usulan tambahan (Claude Code menulis di sini, tidak langsung membuat catatan)
+- **Ground truth setelah delete** (Track 2 atau 5): kapan ground truth top-K harus dihitung
+  ulang setelah delete, dan cara murah menjaganya (margin top-K / radius cakupan τ). Diusulkan
+  saat menulis T2-03; relevan untuk RQ1 dan C-002.
+- **Hubness di kNN graph berdimensi tinggi** (Track 4, mungkin bagian T4-08): sebagian kecil
+  node muncul di sangat banyak daftar tetangga. Diusulkan saat menulis T1-04 dan T1-07.
+- **Centroid / rentang kuantisasi yang basi saat streaming insert** (Track 5): recall turun
+  karena model kuantisasi usang, yang bisa tampak seperti kerusakan graph. Diusulkan saat
+  menulis T3-04 dan T3-05; relevan untuk RQ1.
